@@ -1,0 +1,190 @@
+================================================================================
+                    QUICKCART E-COMMERCE PLATFORM
+                    Project Dependencies Documentation
+================================================================================
+
+PROJECT INFORMATION
+-------------------
+Project Name    : QuickCart E-Commerce Platform
+Version         : 0.1.0
+Framework       : Next.js 15 (App Router)
+Node Version    : >= 18.0.0
+Package Manager : npm or yarn
+
+================================================================================
+                        PRODUCTION DEPENDENCIES
+================================================================================
+
+CORE FRAMEWORK & RUNTIME
+-------------------------
+next                    ^15.5.2     # Next.js React framework with server-side rendering
+react                   ^19.0.0     # React library for building user interfaces
+react-dom               ^19.0.0     # React DOM rendering for web applications
+
+AUTHENTICATION & SECURITY
+--------------------------
+@clerk/nextjs           ^6.31.6     # Clerk authentication for Next.js applications
+                                    # Provides user management, sign-in/sign-up flows
+
+DATABASE & DATA PERSISTENCE
+----------------------------
+mongoose                ^8.18.0     # MongoDB object modeling for Node.js
+                                    # Handles database schema, validation, and queries
+
+WORKFLOW & BACKGROUND JOBS
+---------------------------
+inngest                 ^3.40.2     # Workflow engine for event-driven functions
+                                    # Manages background jobs, scheduled tasks, and events
+
+USER INTERFACE & NOTIFICATIONS
+-------------------------------
+react-hot-toast         ^2.5.1      # Toast notifications for React applications
+                                    # Provides elegant, customizable user feedback
+
+================================================================================
+                        DEVELOPMENT DEPENDENCIES
+================================================================================
+
+CODE QUALITY & LINTING
+-----------------------
+eslint                  ^9          # JavaScript linting utility for code quality
+eslint-config-next      15.1.6      # ESLint configuration for Next.js projects
+@eslint/eslintrc        ^3          # ESLint configuration utilities
+
+STYLING & CSS PROCESSING
+-------------------------
+tailwindcss             ^3.4.1      # Utility-first CSS framework for rapid UI development
+postcss                 ^8          # CSS transformation and processing tool
+
+================================================================================
+                        INSTALLATION INSTRUCTIONS
+================================================================================
+
+INITIAL SETUP
+-------------
+1. Clone the repository
+2. Navigate to project directory
+3. Run installation command
+
+INSTALLATION COMMANDS
+---------------------
+# Using npm (Recommended)
+npm install
+
+# Using npm with clean install (uses package-lock.json)
+npm ci
+
+# Using yarn
+yarn install
+
+# Using pnpm
+pnpm install
+
+================================================================================
+                        RUNNING THE APPLICATION
+================================================================================
+
+DEVELOPMENT MODE
+----------------
+npm run dev                         # Starts development server on localhost:3000
+                                    # Includes hot-reloading and Turbopack
+
+PRODUCTION BUILD
+----------------
+npm run build                       # Creates optimized production build
+npm start                           # Starts production server
+
+CODE QUALITY
+------------
+npm run lint                        # Runs ESLint to check code quality
+
+================================================================================
+                        ENVIRONMENT VARIABLES REQUIRED
+================================================================================
+
+PUBLIC VARIABLES (Client-Side Access)
+--------------------------------------
+NEXT_PUBLIC_CURRENCY                # Currency symbol ($, ₹, €, etc.)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY   # Clerk publishable API key
+
+PRIVATE VARIABLES (Server-Side Only)
+-------------------------------------
+CLERK_SECRET_KEY                    # Clerk secret API key
+MONGODB_URI                         # MongoDB Atlas connection string
+INNGEST_SIGNING_KEY                 # Inngest signing key for security
+INNGEST_EVENT_KEY                   # Inngest event API key
+
+OPTIONAL VARIABLES (Image Upload)
+----------------------------------
+CLOUDINARY_CLOUD_NAME               # Cloudinary account cloud name
+CLOUDINARY_API_KEY                  # Cloudinary API key
+CLOUDINARY_API_SECRET               # Cloudinary API secret
+
+================================================================================
+                        ADDITIONAL UTILITIES
+================================================================================
+
+SAMPLE DATA IMPORT
+------------------
+node insert-sample-data.js          # Populates database with 5 sample products
+                                    # Use for testing and development
+
+================================================================================
+                        EXTERNAL SERVICES REQUIRED
+================================================================================
+
+1. MongoDB Atlas         - https://www.mongodb.com/cloud/atlas
+   Purpose: Database storage for products, users, orders
+   Free Tier: Available
+
+2. Clerk                 - https://clerk.com
+   Purpose: User authentication and management
+   Free Tier: Up to 5,000 monthly active users
+
+3. Inngest              - https://www.inngest.com
+   Purpose: Workflow automation and background jobs
+   Free Tier: Available
+
+4. Cloudinary (Optional) - https://cloudinary.com
+   Purpose: Image hosting and transformation
+   Free Tier: 25GB storage, 25GB bandwidth/month
+
+================================================================================
+                        TROUBLESHOOTING
+================================================================================
+
+COMMON ISSUES
+-------------
+Issue: "Cannot find module 'next'"
+Solution: Run 'npm install' to install all dependencies
+
+Issue: "Port 3000 already in use"
+Solution: Run 'npm run dev -- -p 3001' to use different port
+
+Issue: "MongoDB connection failed"
+Solution: Verify MONGODB_URI in .env file and whitelist IP in MongoDB Atlas
+
+Issue: "Clerk authentication error"
+Solution: Check CLERK_SECRET_KEY and NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+
+================================================================================
+                        DOCUMENTATION & SUPPORT
+================================================================================
+
+Project Documentation   - See README.md for detailed setup guide
+Next.js Docs           - https://nextjs.org/docs
+React Docs             - https://react.dev
+Tailwind CSS Docs      - https://tailwindcss.com/docs
+MongoDB Docs           - https://docs.mongodb.com
+Clerk Docs             - https://clerk.com/docs
+Inngest Docs           - https://www.inngest.com/docs
+
+================================================================================
+                        LICENSE & CONTRIBUTION
+================================================================================
+
+License: MIT License
+Contributions: Welcome! Please submit pull requests.
+
+Last Updated: January 2026
+================================================================================
